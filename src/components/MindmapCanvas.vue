@@ -11,7 +11,7 @@
 
 <script>
 import { nextTick } from 'vue'
-import { generateAxios } from '@nextcloud/axios'
+import axios from '@nextcloud/axios'
 import { showError, showSuccess } from '@nextcloud/dialogs'
 import { generateUrl } from '@nextcloud/router'
 import * as Y from 'yjs'
@@ -147,7 +147,7 @@ export default {
 		
 		async loadMindmap(mindmapId) {
 			try {
-				const response = await generateAxios().get(
+				const response = await axios.get(
 					generateUrl('/apps/notmiro/api/mindmap/load'), {
 						params: { filename: mindmapId }
 					}
@@ -197,7 +197,7 @@ export default {
 				
 				// Save to server
 				const filename = this.mindmapId || 'untitled-mindmap'
-				await generateAxios().post(
+				await axios.post(
 					generateUrl('/apps/notmiro/api/mindmap/save'), {
 						filename,
 						content,

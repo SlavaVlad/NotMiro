@@ -9,5 +9,6 @@ export default createAppConfig(
     createEmptyCSSEntryPoints: true,
     extractLicenseInformation: true,
     thirdPartyLicense: false,
+    outDir: resolve(join(__dirname, "dist")),
   }
 );

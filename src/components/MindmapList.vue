@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { generateAxios } from '@nextcloud/axios'
+import axios from '@nextcloud/axios'
 import { showError, showSuccess } from '@nextcloud/dialogs'
 import { generateUrl } from '@nextcloud/router'
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
@@ -80,7 +80,7 @@ export default {
 			this.loading = true
 			
 			try {
-				const response = await generateAxios().get(
+				const response = await axios.get(
 					generateUrl('/apps/notmiro/api/mindmap/list')
 				)
 				
@@ -112,7 +112,7 @@ export default {
 			}
 			
 			try {
-				const response = await generateAxios().delete(
+				const response = await axios.delete(
 					generateUrl('/apps/notmiro/api/mindmap/delete'), {
 						params: { filename: name }
 					}

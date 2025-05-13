@@ -1,25 +1,65 @@
-# App Template
+# NotMiro - Collaborative Mindmapping for Nextcloud
 
-A template to get started with Nextcloud app development.
+NotMiro is a Nextcloud application that provides a collaborative infinite canvas for creating mindmaps. Create multiple independent mindmaps, add formatted text and images to nodes, and collaborate in real-time with other users.
 
-## Usage
+## Features
 
-- To get started easily use the [Appstore App generator](https://apps.nextcloud.com/developer/apps/generate) to
-  dynamically generate an App based on this repository with all the constants prefilled.
-- Alternatively you can use the "Use this template" button on the top of this page to create a new repository based on
-  this repository. Afterwards adjust all the necessary constants like App ID, namespace, descriptions etc.
+- **Infinite Canvas**: Pan and zoom to navigate your thoughts
+- **Real-time Collaboration**: Work together with others simultaneously
+- **Rich Text Editing**: Format your text with bold, italic, headers, and more
+- **Image Support**: Add images to your mindmap nodes
+- **Automatic Saving**: Changes are automatically saved to your Nextcloud storage
+- **User Awareness**: See where other users are working and who's editing what
 
-Once your app is ready follow the [instructions](https://nextcloudappstore.readthedocs.io/en/latest/developer.html) to
-upload it to the Appstore.
+## Technical Details
 
-## Resources
+NotMiro is built with:
 
-### Documentation for developers:
+- Vue.js for the frontend UI
+- ReactFlow for the infinite canvas and mindmap display
+- Y.js for real-time collaboration
+- Quill for rich text editing
+- Nextcloud Files API for storage
+- PHP for the backend
 
-- General documentation and tutorials: https://nextcloud.com/developer
-- Technical documentation: https://docs.nextcloud.com/server/latest/developer_manual
+## Installation
 
-### Help for developers:
+1. Clone this repository to your Nextcloud apps directory:
+   ```
+   cd /path/to/nextcloud/apps/
+   git clone https://github.com/yourusername/notmiro.git
+   ```
 
-- Official community chat: https://cloud.nextcloud.com/call/xs25tz5y
-- Official community forum: https://help.nextcloud.com/c/dev/11
+2. Enable the app in Nextcloud:
+   - Go to Settings > Apps > Disabled apps
+   - Find "NotMiro" and click "Enable"
+
+## Development
+
+### Requirements
+
+- Node.js 20+
+- npm 10+
+- Nextcloud 29+
+
+### Building the app
+
+```bash
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Build for development and watch for changes
+npm run watch
+```
+
+## License
+
+This app is licensed under the AGPL v3. See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+- Vladislav <nauka.2.0.vs@gmail.com>
+- Website: [hello.illegalfiles.icu](https://hello.illegalfiles.icu)
